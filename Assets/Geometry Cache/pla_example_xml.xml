@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Autodesk_Cache_File>
+  <cacheType Type="OneFile" Format="mcc"/>
+  <time Range="0-2400"/>
+  <cacheTimePerFrame TimePerFrame="240"/>
+  <cacheVersion Version="2.0"/>
+  <Channels>
+    <channel0 ChannelName="_u041E_u0431_u044A_u0435_u043A_u0442__u041A_u0443_u0431" ChannelType="FloatVectorArray" ChannelInterpretation="Points" SamplingType="Regular" SamplingRate="240" StartTime="0" EndTime="2400"/>
+  </Channels>
+</Autodesk_Cache_File>
