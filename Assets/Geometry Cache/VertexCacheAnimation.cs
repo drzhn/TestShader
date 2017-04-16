@@ -31,13 +31,14 @@ public class VertexCacheAnimation : MonoBehaviour
 
         //if (scaleFactor != null)
         //    AutodeskCacheFile.AutodeskCacheFile.ReverseTriangles(meshFilters);
-        cache.ApplyCacheData(Time.deltaTime);
+        //cache.ApplyCacheData(Time.deltaTime);
+        
     }
 
 
     void Update()
     {
-        cache.ApplyCacheData(Time.deltaTime);
-        cache.framePerSecond = fps;
+        //cache.ApplyCacheData(Time.deltaTime);
+        //cache.framePerSecond = fps;
     }
 }

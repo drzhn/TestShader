@@ -126,76 +126,92 @@ namespace AutodeskCacheFile
                     }
                 }
             }
-            ScaleData(Vector3.one * 0.01f);
+            ScaleData(new Vector3(1,-1,1) * 0.01f);
             foreach (string name in meshFilters.Keys)
             {
-                int meshCount = meshFilters[name].mesh.vertexCount;
-                int[] repeatedVertex = new int[meshCount];
-                bool[] isVertexOriginal = Enumerable.Repeat(true, meshCount).ToArray();
-                for (int i = 0; i < meshCount - 1; i++)
+                Debug.Log("mesh:");
+                for (int i = 0; i < meshFilters[name].mesh.vertexCount; i++)
                 {
-                    if (isVertexOriginal[i])
-                    {
-                        for (int j = i + 1; j < meshCount; j++)
-                        {
-                            if (meshFilters[name].mesh.vertices[i] == meshFilters[name].mesh.vertices[j])
-                            {
-                                isVertexOriginal[j] = false;
-                                Debug.Log(i.ToString() + " " + j.ToString());
-                            }
-                        }
-                    }
+                    Debug.Log(VectorToStringForDebug(meshFilters[name].mesh.vertices[i]));
                 }
             }
-            #region transform mesh
-            foreach (string name in meshFilters.Keys)
+            foreach (string key in frameList.Keys)
             {
-                int meshCount = meshFilters[name].mesh.vertexCount;
-                List<List<int>> repeatedVertex = new List<List<int>>();
-                bool[] isVertexOriginal = Enumerable.Repeat(true, meshCount).ToArray();
-
-                for (int i = 0; i < meshCount - 1; i++)
+                Debug.Log("cache:");
+                for (int i =0; i < frameList[key][0].Length; i++)
                 {
-                    if (isVertexOriginal[i])
-                    {
-                        repeatedVertex.Add(new List<int>());
-                        repeatedVertex[repeatedVertex.Count - 1].Add(i);
-                        for (int j = i + 1; j < meshCount; j++)
-                        {
-                            if (meshFilters[name].mesh.vertices[i] == meshFilters[name].mesh.vertices[j])
-                            {
-                                repeatedVertex[repeatedVertex.Count - 1].Add(j);
-                                isVertexOriginal[j] = false;
-                            }
-                        }
-                    }
-                }
-                foreach (List<int> r in repeatedVertex)
-                {
-                    Debug.Log(ArrayToStringForDebug(r));
-                }
-
-                for (int frame = 0; frame < frameList[name].Count; frame++)
-                {
-                    // sometimes unity increases number of vertices during the importing from maya, c4d, etc.
-                    // it's nessesary for correct lighting calculations
-                    // see for details: https://blog.nobel-joergensen.com/2010/12/25/procedural-generated-mesh-in-unity/
-                    // if number of vertices in mesh more than number of points in cache
-                    if (meshCount > frameList[name][frame].Length)
-                    {
-                        Vector3[] newFrame = new Vector3[meshCount];
-                        for (int i = 0; i < frameList[name][frame].Length; i++)
-                        {
-                            for (int j = 0; j < repeatedVertex[i].Count; j++)
-                            {
-                                newFrame[repeatedVertex[i][j]] = frameList[name][frame][i];
-                            }
-                        }
-                        frameList[name][frame] = newFrame;
-                    }
+                    Debug.Log(VectorToStringForDebug(frameList[key][0][i]));
                 }
             }
-            #endregion
+            //foreach (string name in meshFilters.Keys)
+            //{
+            //    int meshCount = meshFilters[name].mesh.vertexCount;
+            //    int[] repeatedVertex = new int[meshCount];
+            //    bool[] isVertexOriginal = Enumerable.Repeat(true, meshCount).ToArray();
+            //    for (int i = 0; i < meshCount - 1; i++)
+            //    {
+            //        if (isVertexOriginal[i])
+            //        {
+            //            for (int j = i + 1; j < meshCount; j++)
+            //            {
+            //                if (meshFilters[name].mesh.vertices[i] == meshFilters[name].mesh.vertices[j])
+            //                {
+            //                    isVertexOriginal[j] = false;
+            //                    Debug.Log(i.ToString() + " " + j.ToString());
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            //#region transform mesh
+            //foreach (string name in meshFilters.Keys)
+            //{
+            //    int meshCount = meshFilters[name].mesh.vertexCount;
+            //    List<List<int>> repeatedVertex = new List<List<int>>();
+            //    bool[] isVertexOriginal = Enumerable.Repeat(true, meshCount).ToArray();
+
+            //    for (int i = 0; i < meshCount - 1; i++)
+            //    {
+            //        if (isVertexOriginal[i])
+            //        {
+            //            repeatedVertex.Add(new List<int>());
+            //            repeatedVertex[repeatedVertex.Count - 1].Add(i);
+            //            for (int j = i + 1; j < meshCount; j++)
+            //            {
+            //                if (meshFilters[name].mesh.vertices[i] == meshFilters[name].mesh.vertices[j])
+            //                {
+            //                    repeatedVertex[repeatedVertex.Count - 1].Add(j);
+            //                    isVertexOriginal[j] = false;
+            //                }
+            //            }
+            //        }
+            //    }
+            //    foreach (List<int> r in repeatedVertex)
+            //    {
+            //        Debug.Log(ArrayToStringForDebug(r));
+            //    }
+
+            //    for (int frame = 0; frame < frameList[name].Count; frame++)
+            //    {
+            //        // sometimes unity increases number of vertices during the importing from maya, c4d, etc.
+            //        // it's nessesary for correct lighting calculations
+            //        // see for details: https://blog.nobel-joergensen.com/2010/12/25/procedural-generated-mesh-in-unity/
+            //        // if number of vertices in mesh more than number of points in cache
+            //        if (meshCount > frameList[name][frame].Length)
+            //        {
+            //            Vector3[] newFrame = new Vector3[meshCount];
+            //            for (int i = 0; i < frameList[name][frame].Length; i++)
+            //            {
+            //                for (int j = 0; j < repeatedVertex[i].Count; j++)
+            //                {
+            //                    newFrame[repeatedVertex[i][j]] = frameList[name][frame][i];
+            //                }
+            //            }
+            //            frameList[name][frame] = newFrame;
+            //        }
+            //    }
+            //}
+            //#endregion
         }
         void parseXML(string xmlString)
         {
@@ -507,6 +523,10 @@ namespace AutodeskCacheFile
                 ret += array[i].ToString() + " ";
             }
             return ret;
+        }
+        public static string VectorToStringForDebug(Vector3 v)
+        {
+            return v.x.ToString() + " " + v.y.ToString() + " " + v.z.ToString();
         }
     }
 }

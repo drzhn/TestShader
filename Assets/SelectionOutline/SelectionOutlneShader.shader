@@ -12,8 +12,8 @@
 			Name "OUTLINE"
 			//Tags{ "LightMode" = "Always" }
 			//Cull Off
-			ZWrite Off
-			ZTest Always
+			ZWrite On
+			ZTest Greater
 			//Blend SrcAlpha OneMinusSrcAlpha
 
 			CGPROGRAM
@@ -47,7 +47,8 @@
 			Name "BASE"
 			//Tags{ "LightMode" = "Always" }
 			ZWrite On
-			ZTest LEqual
+			ZTest Less
+
 			//Blend SrcAlpha OneMinusSrcAlpha
 
 			CGPROGRAM
