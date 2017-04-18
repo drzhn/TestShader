@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: e491829c89a1cb742a6bcc335e72d54f
+timeCreated: 1492452675
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Plane
+    100004: Rock.000
+    100006: Rock.001
+    100008: Rock.002
+    100010: Rock.003
+    100012: Rock.004
+    100014: Rock.005
+    100016: Rock.006
+    100018: Rock.007
+    100020: Rock.008
+    100022: Rock.009
+    100024: Rock.010
+    100026: Rock.011
+    100028: Rock.012
+    100030: Rock.013
+    100032: Rock.014
+    100034: Rock.015
+    100036: Rock.016
+    100038: Rock.017
+    100040: Rock.018
+    100042: Rock.019
+    100044: Rock.020
+    100046: Rock.021
+    100048: Rock.022
+    100050: Rock.023
+    100052: Rock.024
+    100054: Rock.025
+    100056: Rock.026
+    100058: Rock.027
+    400000: //RootNode
+    400002: Plane
+    400004: Rock.000
+    400006: Rock.001
+    400008: Rock.002
+    400010: Rock.003
+    400012: Rock.004
+    400014: Rock.005
+    400016: Rock.006
+    400018: Rock.007
+    400020: Rock.008
+    400022: Rock.009
+    400024: Rock.010
+    400026: Rock.011
+    400028: Rock.012
+    400030: Rock.013
+    400032: Rock.014
+    400034: Rock.015
+    400036: Rock.016
+    400038: Rock.017
+    400040: Rock.018
+    400042: Rock.019
+    400044: Rock.020
+    400046: Rock.021
+    400048: Rock.022
+    400050: Rock.023
+    400052: Rock.024
+    400054: Rock.025
+    400056: Rock.026
+    400058: Rock.027
+    2300000: Plane
+    2300002: Rock.000
+    2300004: Rock.001
+    2300006: Rock.002
+    2300008: Rock.003
+    2300010: Rock.004
+    2300012: Rock.005
+    2300014: Rock.006
+    2300016: Rock.007
+    2300018: Rock.008
+    2300020: Rock.009
+    2300022: Rock.010
+    2300024: Rock.011
+    2300026: Rock.012
+    2300028: Rock.013
+    2300030: Rock.014
+    2300032: Rock.015
+    2300034: Rock.016
+    2300036: Rock.017
+    2300038: Rock.018
+    2300040: Rock.019
+    2300042: Rock.020
+    2300044: Rock.021
+    2300046: Rock.022
+    2300048: Rock.023
+    2300050: Rock.024
+    2300052: Rock.025
+    2300054: Rock.026
+    2300056: Rock.027
+    3300000: Plane
+    3300002: Rock.000
+    3300004: Rock.001
+    3300006: Rock.002
+    3300008: Rock.003
+    3300010: Rock.004
+    3300012: Rock.005
+    3300014: Rock.006
+    3300016: Rock.007
+    3300018: Rock.008
+    3300020: Rock.009
+    3300022: Rock.010
+    3300024: Rock.011
+    3300026: Rock.012
+    3300028: Rock.013
+    3300030: Rock.014
+    3300032: Rock.015
+    3300034: Rock.016
+    3300036: Rock.017
+    3300038: Rock.018
+    3300040: Rock.019
+    3300042: Rock.020
+    3300044: Rock.021
+    3300046: Rock.022
+    3300048: Rock.023
+    3300050: Rock.024
+    3300052: Rock.025
+    3300054: Rock.026
+    3300056: Rock.027
+    4300000: Plane
+    4300002: Rock.027
+    4300004: Rock.026
+    4300006: Rock.025
+    4300008: Rock.024
+    4300010: Rock.023
+    4300012: Rock.022
+    4300014: Rock.021
+    4300016: Rock.020
+    4300018: Rock.019
+    4300020: Rock.018
+    4300022: Rock.017
+    4300024: Rock.016
+    4300026: Rock.015
+    4300028: Rock.014
+    4300030: Rock.013
+    4300032: Rock.012
+    4300034: Rock.011
+    4300036: Rock.010
+    4300038: Rock.009
+    4300040: Rock.008
+    4300042: Rock.007
+    4300044: Rock.006
+    4300046: Rock.005
+    4300048: Rock.004
+    4300050: Rock.003
+    4300052: Rock.002
+    4300054: Rock.001
+    4300056: Rock.000
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
