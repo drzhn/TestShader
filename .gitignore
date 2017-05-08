@@ -4,6 +4,8 @@
 Temp/
 Library/
 Assets/Standart Assets
+Assets/PostProcessing
+Assets/ShaderForge
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -21,6 +23,7 @@ obj/
 *.exe
 *.unityproj
 *.booproj
+*.meta
 
 # ============ #
 # OS generated #
